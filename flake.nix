@@ -16,7 +16,7 @@
             [ "rm -f tools/utils/machine_id/api_test.go" ]
             (old.preCheck or "");
           env = (old.env or { }) // { GOTOOLCHAIN = "local"; };
-          inherit ((prev.buildGo125Module {
+          inherit ((prev.buildGoModule {
             pname = "kitty-go-modules";
             version = "0.46.0-dev";
             src = self;
